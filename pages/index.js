@@ -20,7 +20,12 @@ const Home = ({ items }) => {
       <div className={styles.content}>
         <div className={styles.banner_container}>
           <div className={styles.banner_image}>
-            <Image src="/../public/cover.jpg" width={500} height={700} />
+            <Image
+            src="/../public/cover.jpg"
+            alt="bannerImage"
+            width={500} height={700}
+            layout={"responsive"}
+            />
           </div>
           <div className={styles.banner_info}>
             <p className={styles.item_tite}>
