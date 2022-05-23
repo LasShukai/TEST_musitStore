@@ -1,0 +1,40 @@
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+ @import url("https://use.typekit.net/pjb3lrg.css");
+
+
+html,
+body {
+    background-color: #222;
+    padding: 0;
+     margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #eee;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+    font-family: 'sofia-pro';
+    font-size: 22px;
+    padding: .3em 2.3em;
+  width: 100%;
+  position: relative;
+  left: 0;
+  border-bottom: solid 1px #eee;
+
+
+}
+
+footer {
+
+  margin-top: 100px;
+  text-align: center;
+}
