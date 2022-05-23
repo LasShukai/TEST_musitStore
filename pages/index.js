@@ -39,9 +39,9 @@ const Home = ({ items }) => {
             </div>
 
             {items.map((item) => (
-              <div className={styles.grid_item}>
+              <div className={styles.grid_item} key={item.id}>
                 <Link href={item.permalink}>
-                  <a target="_blank" key={id}>
+                  <a target="_blank">
                     <Image
                       className={styles.item_image}
                       src={item.images[0].src}
