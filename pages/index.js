@@ -19,20 +19,25 @@ const Home = ({ items }) => {
     return (
       <div className={styles.content}>
         <div className={styles.banner_container}>
+          <a href="https://store.dandy-music.com/product/musit-wave-vol-1%e3%80%90musit-%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%abzine%e3%80%91/"
+          target="_blank">
           <div className={styles.banner_image}>
             <Image
-            src="/../public/cover.jpg"
-            alt="bannerImage"
-            width={500} height={700}
-            layout={"responsive"}
+              src="/../public/cover.jpg"
+              alt="bannerImage"
+              width={500}
+              height={700}
+              layout={"responsive"}
             />
           </div>
+
           <div className={styles.banner_info}>
             <p className={styles.item_tite}>
               (W)AVE Vol.1【musit オリジナルZINE】
             </p>
             <p className={styles.item_price}>¥ 1,000 （税込）</p>
           </div>
+          </a>
         </div>
 
         <div className={styles.cards_container}>
@@ -40,11 +45,11 @@ const Home = ({ items }) => {
           <div className={styles.grid_container}>
             <div className={styles.grid_item}>
               <Image
-              src="/../public/iconAlert.png"
-              alt="iconAlert"
-              width={10}
-              height={50}
-              layout={"responsive"}
+                src="/../public/iconAlert.png"
+                alt="iconAlert"
+                width={10}
+                height={50}
+                layout={"responsive"}
               />
               <h4 className={styles.notification}>何点買っても送料￥250</h4>
             </div>
