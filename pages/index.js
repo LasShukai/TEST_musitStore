@@ -34,7 +34,13 @@ const Home = ({ items }) => {
           <h2 className={styles.title}>NEW ARRIVAL</h2>
           <div className={styles.grid_container}>
             <div className={styles.grid_item}>
-              <Image src="/../public/iconAlert.png" width={100} height={200} />
+              <Image
+              src="/../public/iconAlert.png"
+              alt="iconAlert"
+              width={10}
+              height={50}
+              layout={"responsive"}
+              />
               <h4 className={styles.notification}>何点買っても送料￥250</h4>
             </div>
 
@@ -45,8 +51,10 @@ const Home = ({ items }) => {
                     <Image
                       className={styles.item_image}
                       src={item.images[0].src}
+                      alt="itemPic"
                       width={200}
-                      height={220}
+                      height={180}
+                      layout={"responsive"}
                     />
                     <p className={styles.item_title}>{item.name}</p>
                     <p className={styles.item_price}>
