@@ -38,7 +38,7 @@ const Home = ({ items }) => {
             </div>
 
             {items.map((item) => (
-              <div className={styles.grid_item}>
+              <div className={styles.grid_item} id={item.name}>
                 <Link href={item.permalink}>
                   <a target="_blank">
                     <Image
@@ -50,7 +50,9 @@ const Home = ({ items }) => {
                     <p className={styles.item_title}>{item.name}</p>
                     <p className={styles.item_price}>
                       <span> ￥</span>
-                      {item.price}
+
+                      {Math.round(( item.price ) * ( 1+tax/100 ))}
+
                     </p>
                     <p className={styles.item_price}>{`${
                       item.stock_status === "instock" ? "在庫あり" : "在庫切れ"
