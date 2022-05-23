@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image"
 import Link from "next/link";
 import styles from "../styles/Home.module.css"
+import React from "react";
 
 
 export const getStaticProps = async () => {
@@ -38,7 +39,7 @@ const Home = ({ items }) => {
             </div>
 
             {items.map((item) => (
-              <div className={styles.grid_item} id={item.name}>
+              <div className={styles.grid_item} key={item.name}>
                 <Link href={item.permalink}>
                   <a target="_blank">
                     <Image
