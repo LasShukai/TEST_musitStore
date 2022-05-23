@@ -41,7 +41,7 @@ const Home = ({ items }) => {
             {items.map((item) => (
               <div className={styles.grid_item}>
                 <Link href={item.permalink}>
-                  <a target="_blank" key={item.id}>
+                  <a target="_blank" key={id}>
                     <Image
                       className={styles.item_image}
                       src={item.images[0].src}
