@@ -3,6 +3,8 @@ import Image from "next/image"
 import Link from "next/link";
 import styles from "../styles/Home.module.css"
 import React from "react";
+import cover from "../public/cover.jpg"
+import alert from "../public/iconAlert.png"
 
 
 export const getStaticProps = async () => {
@@ -26,7 +28,7 @@ const Home = ({ items }) => {
           >
             <div className={styles.banner_image}>
               <Image
-                src="/../public/cover.jpg"
+                src={cover}
                 alt="bannerImage"
                 width={500}
                 height={700}
@@ -47,7 +49,7 @@ const Home = ({ items }) => {
           <div className={styles.grid_container}>
             <div className={styles.grid_item}>
               <Image
-                src="/../public/iconAlert.png"
+                src={alert}
                 alt="iconAlert"
                 width={10}
                 height={50}
