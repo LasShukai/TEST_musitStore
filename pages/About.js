@@ -28,19 +28,17 @@ const about = () => {
               102
             </p>
             <a
-            href="https://goo.gl/maps/dwNWmkxj9iSQHoLYA"
-            target="_blank"
-            rel="noopener"
-            className ={styles.contact_info_map}
+              href="https://goo.gl/maps/dwNWmkxj9iSQHoLYA"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.contact_info_map}
             >
-                map_
+              map_
             </a>
           </div>
           <div className={styles.contact_info_item}>
             <h2>E-mail</h2>
-            <p className="">
-                example@musit.tokyo
-            </p>
+            <p className="">example@musit.tokyo</p>
           </div>
         </div>
       </div>
