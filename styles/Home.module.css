@@ -3,6 +3,9 @@
     font-weight: 300;
     font-size: 30px;
 }
+.logo{
+    text-align:center;
+}
 
 .nav_container{
     max-width: 1500px;
@@ -72,6 +75,31 @@
 }
 
 
+.about_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px ;
+    padding: 50px;
+}
+
+.about_text{
+    line-height: 20px;
+}
+
+.contact_info{
+    display: flex;
+    padding: 50px;
+}
+
+.contact_info_item{
+    max-width: 145px;
+    padding: 10px;
+
+}
+.contact_info_item p {
+    font-size: 13px;
+    color:#e2e2e2b6;
+}
 
 
 
@@ -111,7 +139,7 @@
 
 /*----------  スマホサイズ  ----------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
-  
+
 
     .banner_container{
             padding: 20px 10px;

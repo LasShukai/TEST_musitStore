@@ -26,7 +26,6 @@ const Home = ({ items }) => {
           <meta name="keywords" content="zine store" />
         </Head>
 
-
         <div className={styles.content}>
           <div className={styles.banner_container}>
             <a
@@ -37,7 +36,6 @@ const Home = ({ items }) => {
               <div className={styles.banner_image}>
                 <Image src={cover} alt="bannerImage" width={500} height={700} />
               </div>
-
 
               <div className={styles.banner_info}>
                 <p className={styles.item_tite}>
@@ -55,9 +53,9 @@ const Home = ({ items }) => {
                 <Image
                   src={alert}
                   alt="iconAlert"
-                  width={10}
-                  height={30}
                   layout={"responsive"}
+                  width={90}
+                  height={90}
                 />
                 <h4 className={styles.notification}>何点買っても送料￥250</h4>
               </div>
