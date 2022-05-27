@@ -56,7 +56,7 @@ const Home = ({ items }) => {
                   src={alert}
                   alt="iconAlert"
                   width={10}
-                  height={50}
+                  height={30}
                   layout={"responsive"}
                 />
                 <h4 className={styles.notification}>何点買っても送料￥250</h4>

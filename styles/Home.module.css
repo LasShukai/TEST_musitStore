@@ -9,8 +9,10 @@
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
 }
 .content{
+    padding: 0 40px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -97,3 +99,40 @@
     display: block;
     font-size: 10px;
 }
+
+
+/*----------  タブレットサイズ  ----------*/
+@media screen and (max-width: 1024px) {
+      .grid_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*----------  スマホサイズ  ----------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  
+
+    .banner_container{
+            padding: 20px 10px;
+    }
+    .banner_image{
+        width: 100%;
+    }
+    .banner_info{
+        width: fit-content;
+    }
+
+    .grid_container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .grid_item{
+        width: fit-content;
+    }
+    .footer_sns{
+        flex-direction: column;
+    }
+}
+
+
