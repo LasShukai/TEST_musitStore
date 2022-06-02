@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css"
 import React from "react";
 import cover from "../public/cover.jpg"
 import alert from "../public/iconAlert.png"
-import Script from "next/script";
+import {motion} from "framer-motion"
 
 
 export const getStaticProps = async () => {
@@ -24,18 +24,35 @@ const Home = ({ items }) => {
         <Head>
           <title>musit Store | Top </title>
           <meta name="keywords" content="zine store" />
+
         </Head>
 
-        <div className={styles.content}>
+        <motion.div className={styles.content}
+        initial={{opacity:0, y:20}}
+        animate={{opacity:1,y:0 }}
+        transition={{type:'spring', delay:.5}}
+        >
           <div className={styles.banner_container}>
             <a
               href="https://store.dandy-music.com/product/musit-wave-vol-1%e3%80%90musit-%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%abzine%e3%80%91/"
               target="_blank"
               rel="noreferrer"
             >
-              <div className={styles.banner_image}>
-                <Image src={cover} alt="bannerImage" width={500} height={700} />
-              </div>
+              <motion.div className={styles.banner_image}
+              whileHover={{
+                  scale:1.03,
+                  
+
+                }}
+              >
+                <Image
+                  src={cover}
+                  alt="bannerImage"
+                  width={500}
+                  height={700}
+                  data-w-id="604452f3-c751-deca-c945-4371d757a964"
+                />
+              </motion.div>
 
               <div className={styles.banner_info}>
                 <p className={styles.item_tite}>
@@ -89,7 +106,9 @@ const Home = ({ items }) => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
+
+
       </>
     );
 }
