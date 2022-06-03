@@ -101,17 +101,18 @@ const Home = ({ items }) => {
                   <Link href={item.permalink}>
                     <a target="_blank" rel="noreferrer">
                         <div className={styles.item_imgContainer}>
-                            <motion.p className={styles.item_hideText}
+                            <motion.div className={styles.item_hideText}
                             variants={hiddenVarient}
                             initial="hidden"
                             whileHover="visible"
-                            >{item.short_description}</motion.p>
+                            dangerouslySetInnerHTML={{__html:item.short_description}}
+                            ></motion.div>
                             <Image
                                 className={styles.item_image}
                                 src={item.images[0].src}
                                 alt="itemPic"
                                 width={200}
-                                height={180}
+                                height={320}
                                 layout={"responsive"}
                             />
                       </div>
