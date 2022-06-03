@@ -15,7 +15,7 @@
     align-items: center;
 }
 .content{
-    padding: 0 40px;
+    padding: 0 30px;
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -66,10 +66,10 @@
 
 .grid_item{
     border: .5px solid #eaeaea;
-    padding: 40px;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 .item_imgContainer{
     position: relative;
@@ -155,7 +155,7 @@
       .grid_container{
         display: grid;
         align-items: stretch;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
