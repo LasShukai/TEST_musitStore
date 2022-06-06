@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image"
+
 import Link from "next/link";
 import styles from "../styles/Home.module.css"
 import React from "react";
 import cover from "../public/cover.jpg"
 import alert from "../public/iconAlert.png"
+
 import {motion} from "framer-motion"
 
 
@@ -58,7 +60,7 @@ const Home = ({ items }) => {
                 }}
               >
                 <motion.p
-                  className={styles.item_hideText}
+                  className={styles.banner_hideText}
                   variants={hiddenVarient}
                   initial="hidden"
                   whileHover="visible"
@@ -101,7 +103,8 @@ const Home = ({ items }) => {
                   alt="bannerImage"
                   width={500}
                   height={700}
-                  data-w-id="604452f3-c751-deca-c945-4371d757a964"
+                  layout={'responsive'}
+
                 />
               </motion.div>
 
@@ -124,7 +127,6 @@ const Home = ({ items }) => {
                   layout={"responsive"}
                   width={90}
                   height={90}
- 
                 />
                 <h4 className={styles.notification}>何点買っても送料￥250</h4>
               </div>
@@ -168,6 +170,7 @@ const Home = ({ items }) => {
                   </Link>
                 </div>
               ))}
+
             </div>
           </div>
         </motion.div>

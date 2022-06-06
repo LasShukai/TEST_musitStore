@@ -50,6 +50,20 @@
     width: 500px;
 }
 
+.banner_hideText{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: left;
+    background-color: rgba(34, 34, 34, 0.9);
+    overflow: scroll;
+    padding: 40px 50px;
+
+
+}
+
 .item_title{
     font-size: 18px;
     margin-top: 10px;
