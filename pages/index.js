@@ -9,7 +9,6 @@ import alert from "../public/iconAlert.png"
 
 import {motion} from "framer-motion"
 
-
 const hiddenVarient = {
     hidden:{
         opacity:0,
@@ -23,12 +22,16 @@ const hiddenVarient = {
     }
 }
 
+
+
 export const getStaticProps = async () => {
   const res = await fetch("https://api.dandy-music.com/?category=153");
   const data = await res.json();
 
   return {
-    props: { items: data },
+    props: {
+      items: data
+    },
   };
 };
 
@@ -103,8 +106,7 @@ const Home = ({ items }) => {
                   alt="bannerImage"
                   width={500}
                   height={700}
-                  layout={'responsive'}
-
+                  layout={"responsive"}
                 />
               </motion.div>
 
@@ -170,7 +172,6 @@ const Home = ({ items }) => {
                   </Link>
                 </div>
               ))}
-
             </div>
           </div>
         </motion.div>

@@ -53,15 +53,13 @@
 .banner_hideText{
     position: absolute;
     z-index: 2;
-    width: 100%;
+    width: 500px;
     height: 100%;
     margin: 0;
     text-align: left;
     background-color: rgba(34, 34, 34, 0.9);
     overflow: scroll;
     padding: 40px 50px;
-
-
 }
 
 .item_title{
@@ -95,6 +93,7 @@
 }
 .item_image{
     position: relative;
+    top: 0;
 
 }
 .item_hideText{
@@ -112,13 +111,12 @@
 .about_container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px ;
-    padding: 50px;
+    gap: 60px ;
+    padding: 100px;
+    line-height: 2;
 }
 
-.about_text{
-    line-height: 20px;
-}
+
 
 .contact_info{
     display: flex;
@@ -193,6 +191,10 @@
     }
     .grid_item{
         width: fit-content;
+    }
+
+    .about_container{
+        display: block;
     }
     .footer_sns{
         flex-direction: column;
