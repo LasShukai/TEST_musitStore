@@ -17,7 +17,7 @@ const Footer = () => {
           </Link>
           <Link href="https://www.facebook.com/musit7.music.x.it/">
             <a target="_blank">
-              <li>FaceBook</li>
+              <li>facebook</li>
             </a>
           </Link>
           <Link href="https://www.instagram.com/musit7/">

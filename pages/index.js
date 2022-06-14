@@ -13,14 +13,18 @@ import {motion} from "framer-motion"
 const hiddenVarient = {
       hidden: {
         opacity: 0,
+        y:100
       },
+
       visible: {
         opacity: 1,
+        y:0,
         transition: {
-          type: "spring",
-          stiffness: 100,
+          type: "Tween",
+          stiffness: 150,
+
         },
-      },
+        },
     };
 
 
@@ -51,7 +55,7 @@ const Home = ({ items }) => {
           className={styles.content}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", delay: 0.5 }}
+          transition={{ type: "spring", delay: 0.6 }}
         >
           <div className={styles.banner_container}>
             <a
@@ -64,12 +68,14 @@ const Home = ({ items }) => {
                 whileHover={{
                   scale: 1.03,
                 }}
+
               >
                 <motion.p
                   className={styles.banner_hideText}
                   variants={hiddenVarient}
                   initial="hidden"
                   whileHover="visible"
+
                 >
                   musit
                   オリジナルZINE『(W)AVE』Vol.1　※よみ：ウェイヴ▼収録内容　※（）内はライター名巻頭特集：スピッツ30周年
