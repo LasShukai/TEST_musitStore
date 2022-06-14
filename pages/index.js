@@ -31,7 +31,7 @@ const hiddenVarient = {
 
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://api.dandy-music.com/?category=153");
+  const res = await fetch("https://api.dandy-music.com/?category=181");
   const data = await res.json();
 
 
