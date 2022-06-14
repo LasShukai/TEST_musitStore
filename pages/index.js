@@ -9,24 +9,27 @@ import alert from "../public/iconAlert.png"
 
 import {motion} from "framer-motion"
 
+
 const hiddenVarient = {
-    hidden:{
-        opacity:0,
-    },
-    visible:{
-        opacity:1,
-        transition:{
-            type:'spring',
-            stiffness:100,
-        }
-    }
-}
+      hidden: {
+        opacity: 0,
+      },
+      visible: {
+        opacity: 1,
+        transition: {
+          type: "spring",
+          stiffness: 100,
+        },
+      },
+    };
+
 
 
 
 export const getStaticProps = async () => {
   const res = await fetch("https://api.dandy-music.com/?category=153");
   const data = await res.json();
+
 
   return {
     props: {
@@ -126,9 +129,9 @@ const Home = ({ items }) => {
                 <Image
                   src={alert}
                   alt="iconAlert"
-                  layout={"responsive"}
-                  width={90}
-                  height={90}
+                  layout={"fixed"}
+                  width={70}
+                  height={70}
                 />
                 <h4 className={styles.notification}>何点買っても送料￥250</h4>
               </div>

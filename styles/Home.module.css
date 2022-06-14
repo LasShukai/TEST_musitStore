@@ -4,7 +4,10 @@
     font-size: 30px;
 }
 .logo{
-    text-align:center;
+
+    display: inline-block;
+    margin-top: 0;
+
 }
 
 .nav_container{
@@ -53,7 +56,11 @@
 .banner_hideText{
     position: absolute;
     z-index: 2;
-    width: 500px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     height: 100%;
     margin: 0;
     text-align: left;
@@ -82,7 +89,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
+
+.notification{
+    max-width: 120px;
+}
+
 .item_imgContainer{
     position: relative;
     align-items: center;
@@ -116,8 +129,11 @@
     line-height: 2;
 }
 
+.store{
+    margin-top: 40px;
 
 
+}
 .contact_info{
     display: flex;
     padding: 50px;
@@ -137,21 +153,30 @@
 
 .footer_link{
     max-width: 1500px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 5rem;
+    padding: .3em 2.3em;
+
 }
 .footer_sns{
-    list-style: none;
     display: flex;
-    justify-content: end;
+    
+    list-style: none;
+    margin: 0;
 
+}
 
+.footer_sns a{
+    vertical-align: middle;
 }
 .footer_sns li{
     padding-left: 10px;
+
+
+
 }
 
 
@@ -168,6 +193,9 @@
         display: grid;
         align-items: stretch;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .about_container{
+        padding: 20px;
     }
 }
 
@@ -190,14 +218,22 @@
         grid-template-columns: repeat(1,1fr);
     }
     .grid_item{
-        width: fit-content;
+       display: flex;
+       min-height: 300px;
+       padding: 10px 5px;
     }
 
     .about_container{
         display: block;
+        padding: 10px;
+    }
+    .contact_info{
+        padding: 10px;
     }
     .footer_sns{
         flex-direction: column;
+        padding: 10px;
+
     }
 }
 

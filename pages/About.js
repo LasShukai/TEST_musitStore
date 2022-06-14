@@ -1,14 +1,16 @@
 import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 import Image from "next/image";
 import store from "../public/store.jpg"
-import logo from "../public/logo.png"
 import styles from "../styles/Home.module.css"
 const about = () => {
     return (
       <div className={styles.content}>
-        <h1 className={styles.store}>
-          <Image src={store} width={1100} height={600} layout={"responsive"} />
-        </h1>
+        <div className={styles.store}>
+          <Image src={store}
+          width={16}
+          height={9}
+          layout={"responsive"} />
+        </div>
         <div className={styles.about_container}>
           <p className="about_text">
             当ストアは、ZINEやリトルプレスの書籍を中心に、音楽メディア「musit」の運営陣が良いと感じたものをセレクトし販売するオンライン・ショップです。
