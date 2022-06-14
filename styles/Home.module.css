@@ -24,7 +24,6 @@
 }
 
 .title{
-
     font-family: 'sofia-pro';
     font-size: 30px;
 }
@@ -70,6 +69,7 @@
 .item_title{
     font-size: 18px;
     margin-top: 10px;
+
 }
 .item_price{
     color: #EBB353;
@@ -86,10 +86,12 @@
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
-
+.item_notification{
+    justify-content: center;
+}
 .notification{
     max-width: 120px;
 }
@@ -116,6 +118,9 @@
     text-align: left;
     background-color: rgba(34, 34, 34, 0.9);
     overflow: scroll;
+}
+.item_link{
+    width: 100%;
 }
 
 

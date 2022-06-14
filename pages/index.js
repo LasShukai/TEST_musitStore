@@ -21,9 +21,7 @@ const hiddenVarient = {
         y:0,
         transition: {
           type: "Tween",
-          stiffness: 150,
-
-        },
+          stiffness: 150,},
         },
     };
 
@@ -68,14 +66,12 @@ const Home = ({ items }) => {
                 whileHover={{
                   scale: 1.03,
                 }}
-
               >
                 <motion.p
                   className={styles.banner_hideText}
                   variants={hiddenVarient}
                   initial="hidden"
                   whileHover="visible"
-
                 >
                   musit
                   オリジナルZINE『(W)AVE』Vol.1　※よみ：ウェイヴ▼収録内容　※（）内はライター名巻頭特集：スピッツ30周年
@@ -131,7 +127,7 @@ const Home = ({ items }) => {
           <div className={styles.cards_container}>
             <h2 className={styles.title}>NEW ARRIVAL</h2>
             <div className={styles.grid_container}>
-              <div className={styles.grid_item}>
+              <div className={`${styles.grid_item} ${styles.item_notification}`}>
                 <Image
                   src={alert}
                   alt="iconAlert"
@@ -145,7 +141,11 @@ const Home = ({ items }) => {
               {items.map((item) => (
                 <div className={styles.grid_item} key={item.id}>
                   <Link href={item.permalink}>
-                    <a target="_blank" rel="noreferrer">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className={styles.item_link}
+                    >
                       <div className={styles.item_imgContainer}>
                         <motion.div
                           className={styles.item_hideText}
