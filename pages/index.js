@@ -139,7 +139,7 @@ const Home = ({ items }) => {
                   width={70}
                   height={70}
                 />
-                <h4 className={styles.notification}>何点買っても送料￥250</h4>
+                <h4 className={styles.notification}>何点買っても送料￥300</h4>
               </div>
 
               {items.map((item) => (
