@@ -199,6 +199,9 @@
     .about_container{
         padding: 20px;
     }
+    .banner_hideText{
+        display: none;
+    }
      .item_hideText{
         display: none;
     }
@@ -238,6 +241,10 @@
         flex-direction: column;
         padding: 10px;
         line-height: 2;
+    }
+
+     .banner_hideText{
+        display: none;
     }
     .item_hideText{
         display: none;
