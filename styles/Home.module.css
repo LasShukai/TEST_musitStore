@@ -199,12 +199,13 @@
     .about_container{
         padding: 20px;
     }
+     .item_hideText{
+        display: none;
+    }
 }
 
 /*----------  スマホサイズ  ----------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
-
-
     .banner_container{
             padding: 20px 10px;
     }
@@ -237,7 +238,9 @@
         flex-direction: column;
         padding: 10px;
         line-height: 2;
-
+    }
+    .item_hideText{
+        display: none;
     }
 }
 

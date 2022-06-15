@@ -23,6 +23,7 @@ const hiddenVarient = {
           type: "Tween",
           stiffness: 150,},
         },
+
     };
 
 
