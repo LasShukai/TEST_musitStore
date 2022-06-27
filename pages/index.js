@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Image from "next/image"
+import Image from "next/image";
 
 import Link from "next/link";
-import styles from "../styles/Home.module.css"
+import styles from "../styles/Home.module.css";
 import React from "react";
-import cover from "../public/cover.jpg"
-import alert from "../public/iconAlert.png"
+import cover from "../public/cover.jpg";
+import alert from "../public/iconAlert.png";
 
-import {motion} from "framer-motion"
+import {motion} from "framer-motion";
 
 
 const hiddenVarient = {
@@ -24,22 +24,14 @@ const hiddenVarient = {
           stiffness: 150,},
         },
 
+        smartVisible: {
+            opacity: 1,
+            transition:{
+                delay:3,
+            }
+        }
+
     };
-
-
-
-
-export const getStaticProps = async () => {
-  const res = await fetch("https://api.dandy-music.com/?category=181");
-  const data = await res.json();
-
-
-  return {
-    props: {
-      items: data
-    },
-  };
-};
 
 const Home = ({ items }) => {
     const tax = 10;
@@ -136,7 +128,7 @@ const Home = ({ items }) => {
                   width={70}
                   height={70}
                 />
-                <h4 className={styles.notification}>何点買っても送料￥300</h4>
+                <h4 className={styles.notification}>何点買っても<br />送料￥300</h4>
               </div>
 
               {items.map((item) => (

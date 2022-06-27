@@ -1,7 +1,9 @@
-import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 import Image from "next/image";
 import store from "../public/store.jpg"
 import styles from "../styles/Home.module.css"
+
+
+
 const about = () => {
     return (
       <div className={styles.content}>

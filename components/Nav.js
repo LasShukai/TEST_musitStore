@@ -8,7 +8,7 @@ const Nav = () => {
       <div className={styles.nav_container}>
         <Link href="/">
           <a>
-            <h1 className={styles.brand}>musit Store</h1>
+            <h1 className={styles.brand}>musit store</h1>
           </a>
         </Link>
         <Link href="/About">
