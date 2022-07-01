@@ -32,7 +32,7 @@ const hiddenVarient = {
     },
   },
 };
-c
+
 export const getStaticProps = async () => {
   const res = await fetch("https://api.dandy-music.com/?category=181");
   const data = await res.json();
