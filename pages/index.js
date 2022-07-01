@@ -67,7 +67,10 @@ const Home = ({ items }) => {
         <meta content="https://imgur.com/shG9HTq" property="twitter:image" />
         <meta property="og:type" content="website" />
         <meta content="summary_large_image" name="twitter:card" />
-        <meta name="keywords" content="zine, アイドル, zine store" />
+        <meta
+          name="keywords"
+          content="zine, リトルプレス, ZINE　ショップ, ZINE　オンラインショップ, ZINE　本屋, アイドル, zine store"
+        />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
 
