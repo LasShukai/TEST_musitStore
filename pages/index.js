@@ -7,8 +7,7 @@ import React from "react";
 import cover from "../public/cover.jpg";
 import alert from "../public/iconAlert.png";
 
-import {motion} from "framer-motion";
-
+import { motion } from "framer-motion";
 
 const hiddenVarient = {
   hidden: {
@@ -37,20 +36,39 @@ export const getStaticProps = async () => {
   const res = await fetch("https://api.dandy-music.com/?category=181");
   const data = await res.json();
 
-
   return {
     props: {
-      items: data
+      items: data,
     },
   };
 };
+
 const Home = ({ items }) => {
   const tax = 10;
   return (
     <>
       <Head>
         <title>musit Store | Top </title>
-        <meta name="keywords" content="zine store" />
+        <meta
+          content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
+          name="description"
+        />
+        <meta content="musit store" property="og:title" />
+        <meta
+          content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
+          property="og:description"
+        />
+        <meta content="https://imgur.com/shG9HTq" property="og:image" />
+        <meta content="musit store" property="twitter:title" />
+        <meta
+          content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
+          property="twitter:description"
+        />
+        <meta content="https://imgur.com/shG9HTq" property="twitter:image" />
+        <meta property="og:type" content="website" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta name="keywords" content="zine, アイドル, zine store" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
 
       <motion.div
@@ -146,50 +164,47 @@ const Home = ({ items }) => {
               </h4>
             </div>
 
-              {items.map((item) => (
-                <div className={styles.grid_item} key={item.id}>
-                  <Link href={item.permalink}>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      className={styles.item_link}
-                    >
-                      <div className={styles.item_imgContainer}>
-                        <motion.div
-                          className={styles.item_hideText}
-                          variants={hiddenVarient}
-                          initial="hidden"
-                          whileHover="visible"
-                          dangerouslySetInnerHTML={{
-                            __html: item.short_description,
-                          }}
-                        ></motion.div>
-                        <Image
-                          className={styles.item_image}
-                          src={item.images[0].src}
-                          alt="itemPic"
-                          width={200}
-                          height={320}
-                          layout={"responsive"}
-                          objectFit="contain"
-                        />
-                      </div>
-                      <p className={styles.item_title}>{item.name}</p>
-                      <p className={styles.item_price}>
-                        <span> ￥</span>
+            {items.map((item) => (
+              <div className={styles.grid_item} key={item.id}>
+                <Link href={item.permalink}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.item_link}
+                  >
+                    <div className={styles.item_imgContainer}>
+                      <motion.div
+                        className={styles.item_hideText}
+                        variants={hiddenVarient}
+                        initial="hidden"
+                        whileHover="visible"
+                        dangerouslySetInnerHTML={{
+                          __html: item.short_description,
+                        }}
+                      ></motion.div>
+                      <Image
+                        className={styles.item_image}
+                        src={item.images[0].src}
+                        alt="itemPic"
+                        width={200}
+                        height={320}
+                        layout={"responsive"}
+                        objectFit="contain"
+                      />
+                    </div>
+                    <p className={styles.item_title}>{item.name}</p>
+                    <p className={styles.item_price}>
+                      <span> ￥</span>
 
-                        {Math.round(item.price * (1 + tax / 100))}
-                      </p>
-                      <p className={styles.item_price}>{`${
-                        item.stock_status === "instock"
-                          ? "在庫あり"
-                          : "在庫切れ"
-                      }`}</p>
-                    </a>
-                  </Link>
-                </div>
-              ))}
-
+                      {Math.round(item.price * (1 + tax / 100))}
+                    </p>
+                    <p className={styles.item_price}>{`${
+                      item.stock_status === "instock" ? "在庫あり" : "在庫切れ"
+                    }`}</p>
+                  </a>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </motion.div>
