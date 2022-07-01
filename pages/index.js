@@ -58,13 +58,19 @@ const Home = ({ items }) => {
           content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
           property="og:description"
         />
-        <meta content="https://imgur.com/shG9HTq" property="og:image" />
+        <meta
+          content="https://res.cloudinary.com/musit-store/image/upload/v1656664938/musitstore_nudabo.jpg"
+          property="og:image"
+        />
         <meta content="musit store" property="twitter:title" />
         <meta
           content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
           property="twitter:description"
         />
-        <meta content="https://imgur.com/shG9HTq" property="twitter:image" />
+        <meta
+          content="https://res.cloudinary.com/musit-store/image/upload/v1656664938/musitstore_nudabo.jpg"
+          property="twitter:image"
+        />
         <meta property="og:type" content="website" />
         <meta content="summary_large_image" name="twitter:card" />
         <meta
