@@ -1,18 +1,29 @@
-
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
- @import url("https://use.typekit.net/pjb3lrg.css");
-
+@import url("https://use.typekit.net/pjb3lrg.css");
 
 html,
 body {
-    background-color: #222;
-    padding: 0;
-     margin: 0;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #eee;
+  background-color: #222;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #eee;
+  overflow-y: scroll;
 }
-h2{
-    font-family: 'sofia-pro';
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+:root body {
+  position: absolute;
+}
+body {
+  width: 100vw;
+
+  overflow: hidden;
+}
+h2 {
+  font-family: "sofia-pro";
 }
 
 a {
@@ -25,9 +36,9 @@ a {
 }
 
 nav {
-    font-family: 'sofia-pro';
-    font-size: 22px;
-    padding: .3em 2.3em;
+  font-family: "sofia-pro";
+  font-size: 22px;
+  padding: 0.3em 2.3em;
   width: 100%;
   position: relative;
   left: 0;
@@ -35,20 +46,16 @@ nav {
 }
 
 footer {
-
   margin-top: 100px;
   text-align: center;
 }
 
-
-
 /*----------  スマホサイズ  ----------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
-    nav{
-        padding: 0 15px;
-    }
-    footer{
-        margin-top: 20px;
-
-    }
+  nav {
+    padding: 0 15px;
+  }
+  footer {
+    margin-top: 20px;
+  }
 }
