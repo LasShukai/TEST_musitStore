@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import React from "react";
 
-import musitstoreOG from "../public/musitstoreOG.jpg";
+
 import cover from "../public/cover.jpg";
 import alert from "../public/iconAlert.png";
 
@@ -60,13 +60,13 @@ const Home = ({ items }) => {
           content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
           property="og:description"
         />
-        <meta content={musitstoreOG} property="og:image" />
+        <meta content="./public/musitstoreOG.jpg" property="og:image" />
         <meta content="musit store" property="twitter:title" />
         <meta
           content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
           property="twitter:description"
         />
-        <meta content={musitstoreOG} property="twitter:image" />
+        <meta content="./public/musitstoreOG.jpg" property="twitter:image" />
         <meta property="og:type" content="website" />
         <meta content="summary_large_image" name="twitter:card" />
         <meta
