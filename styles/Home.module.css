@@ -1,20 +1,4 @@
-.brand {
-  font-family: "sofia-pro";
-  font-weight: 300;
-  font-size: 30px;
-}
-.logo {
-  display: inline-block;
-  margin-top: 0;
-}
 
-.nav_container {
-  display: flex;
-  max-width: 1500px;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-}
 .content {
   max-width: 1500px;
   margin: 0 auto;
@@ -140,32 +124,8 @@
   color: #e2e2e2b6;
 }
 
-.footer_link {
-  max-width: 1500px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.3em 2.3em;
-}
-.footer_sns {
-  display: flex;
-  list-style: none;
-  margin: 0;
-}
 
-.footer_sns a {
-  vertical-align: middle;
-}
-.footer_sns li {
-  padding-left: 10px;
-}
 
-.footer_copyright {
-  display: block;
-  font-size: 10px;
-}
 
 /*----------  タブレットサイズ  ----------*/
 @media screen and (max-width: 1024px) {
@@ -184,6 +144,7 @@
     display: none;
   }
 }
+
 
 /*----------  スマホサイズ  ----------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
@@ -213,14 +174,8 @@
     padding: 10px;
   }
   .contact_info {
-    padding: 10px;
+    padding: 5px;
   }
-  .footer_sns {
-    flex-direction: column;
-    padding: 10px;
-    line-height: 2;
-  }
-
   .banner_hideText {
     display: none;
   }
