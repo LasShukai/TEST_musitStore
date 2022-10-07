@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0 30px;
   .title {
-    font-family: 'sofia-pro';
+    font-family: "sofia-pro";
     font-size: 30px;
   }
   .banner_container {
@@ -110,13 +110,13 @@
   }
   /*----------  タブレットサイズ  ----------*/
   @media screen and (max-width: 1024px) {
-    .hideText_container{
-        display: none;
+    .hideText_container {
+      display: none;
     }
 
     .grid_container {
       grid-template-columns: 1fr 1fr 1fr;
-      .hideText_containe{
+      .hideText_containe {
         display: none;
       }
     }
@@ -167,15 +167,23 @@
 
   /*----------  タブレットサイズ  ----------*/
   @media screen and (max-width: 1024px) {
-    .store{
-        margin-top: 20px;
-        padding: 10px;
+    .store {
+      margin-top: 20px;
+      padding: 10px;
     }
     .about_container {
-     grid-template-columns: 1fr;
-     grid-gap:20px;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
       padding: 20px;
       padding: 0;
     }
   }
+}
+
+.more {
+  font-size: 30px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: inherit;
 }

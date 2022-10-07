@@ -7,6 +7,7 @@ import React from "react";
 
 import cover from "../public/cover.jpg";
 import alert from "../public/iconAlert.png";
+import { useState } from "react";
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -23,6 +24,11 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({ items }) => {
+  const [noOfElement, setnoOfElement] = useState(8);
+  const loadMore = () => {
+    setnoOfElement(noOfElement + noOfElement);
+  };
+  const slice = items.slice(0, noOfElement);
   const tax = 10;
   return (
     <>
@@ -141,7 +147,7 @@ const Home = ({ items }) => {
               </h4>
             </div>
 
-            {items.map((item) => (
+            {slice.map((item) => (
               <div className={styles.grid_item} key={item.id}>
                 <Link href={item.permalink}>
                   <a
@@ -179,6 +185,13 @@ const Home = ({ items }) => {
                 </Link>
               </div>
             ))}
+            <button
+              className={`${styles.grid_item} ${styles.more}`}
+              onClick={() => loadMore()}
+            >
+              {" "}
+              view more
+            </button>
           </div>
         </div>
       </div>
