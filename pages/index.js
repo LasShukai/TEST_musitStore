@@ -2,46 +2,23 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import React from "react";
-
 
 import cover from "../public/cover.jpg";
 import alert from "../public/iconAlert.png";
 
-import { motion } from "framer-motion";
-
-const hiddenVarient = {
-  hidden: {
-    opacity: 0,
-    y: 100,
-  },
-
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "Tween",
-      stiffness: 150,
-    },
-  },
-
-  smartVisible: {
-    opacity: 1,
-    transition: {
-      delay: 3,
-    },
-  },
-};
-
 export const getStaticProps = async () => {
-  const res = await fetch("https://api.dandy-music.com/?category=181");
+  const res = await fetch(
+    "https://api.dandy-music.com/?category=181&per_page=20"
+  );
   const data = await res.json();
 
   return {
     props: {
       items: data,
     },
+    revalidate: 60,
   };
 };
 
@@ -60,13 +37,19 @@ const Home = ({ items }) => {
           content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
           property="og:description"
         />
-        <meta content="./public/musitstoreOG.jpg" property="og:image" />
+        <meta
+          content="https://store.musit.net/musitstoreOG.jpg"
+          property="og:image"
+        />
         <meta content="musit store" property="twitter:title" />
         <meta
           content="音楽メディア「musit」が展開する小さなセレクト・ショップ。ZINEやリトルプレスの書籍を中心に、運営陣が良いと感じたものを取り揃えています。"
           property="twitter:description"
         />
-        <meta content="./public/musitstoreOG.jpg" property="twitter:image" />
+        <meta
+          content="https://store.musit.net/musitstoreOG.jpg"
+          property="twitter:image"
+        />
         <meta property="og:type" content="website" />
         <meta content="summary_large_image" name="twitter:card" />
         <meta
@@ -76,71 +59,60 @@ const Home = ({ items }) => {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
 
-      <motion.div
-        className={styles.content}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", delay: 0.6 }}
-      >
+      <div className={styles.content}>
         <div className={styles.banner_container}>
           <a
             href="https://store.dandy-music.com/product/musit-wave-vol-1%e3%80%90musit-%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%abzine%e3%80%91/"
             target="_blank"
             rel="noreferrer"
           >
-            <motion.div
-              className={styles.banner_image}
-              whileHover={{
-                scale: 1.03,
-              }}
-            >
-              <motion.p
-                className={styles.banner_hideText}
-                variants={hiddenVarient}
-                initial="hidden"
-                whileHover="visible"
-              >
-                musit
-                オリジナルZINE『(W)AVE』Vol.1　※よみ：ウェイヴ▼収録内容　※（）内はライター名巻頭特集：スピッツ30周年
-                <br />
-                ・『スピッツ』&amp;『見っけ』クロスレビュー
-                <br />
-                ・全アルバムレビュー
-                <br />
-                ※寄稿者：翳目／Goseki／鮭いくら／高橋まりな／對馬拓／仲川ドイツ／中澤星児
-                <br />
-                ※ジャケットイラスト：鮭いくらエッセイ
-                <br />
-                ・さらりとした風（みくりや佐代子）
-                <br />
-                ・音楽への不器用な愛を、呪いの歌姫に託して。（すなくじら）コラム
-                <br />
-                ・歪み系エフェクターを購入する際に知っておくべきこと（Ot3）
-                <br />
-                ・Good Music酒場探訪記 Vol.1 レレレノレコード（仲川ドイツ）
-                <br />
-                ・ピンク・フロイドの叙情性（鈴木レイヤ）小説
-                <br />
-                ・私、宇宙（安藤エヌ）
-                <br />
-                ・destruction（中澤星児）
-                <br />
-                ・CLOVER（高橋まりな）
-                <br />
-                ・雯（鈴木レイヤ）▼仕様・サイズ：A5
-                <br />
-                ・ページ数：50　※表紙含む
-                <br />
-                ・色：オールカラー　※小説部分のみモノクロ※送料はZINEのみ購入の場合、一律¥300となります。
-              </motion.p>
-              <Image
-                src={cover}
-                alt="bannerImage"
-                width={500}
-                height={700}
-                layout={"responsive"}
-              />
-            </motion.div>
+            <div className={styles.banner_img_container}>
+              <div className={styles.hideText_container}>
+                <p className={styles.hideText}>
+                  musit
+                  オリジナルZINE『(W)AVE』Vol.1　※よみ：ウェイヴ▼収録内容　※（）内はライター名巻頭特集：スピッツ30周年
+                  <br />
+                  ・『スピッツ』&amp;『見っけ』クロスレビュー
+                  <br />
+                  ・全アルバムレビュー
+                  <br />
+                  ※寄稿者：翳目／Goseki／鮭いくら／高橋まりな／對馬拓／仲川ドイツ／中澤星児
+                  <br />
+                  ※ジャケットイラスト：鮭いくらエッセイ
+                  <br />
+                  ・さらりとした風（みくりや佐代子）
+                  <br />
+                  ・音楽への不器用な愛を、呪いの歌姫に託して。（すなくじら）コラム
+                  <br />
+                  ・歪み系エフェクターを購入する際に知っておくべきこと（Ot3）
+                  <br />
+                  ・Good Music酒場探訪記 Vol.1 レレレノレコード（仲川ドイツ）
+                  <br />
+                  ・ピンク・フロイドの叙情性（鈴木レイヤ）小説
+                  <br />
+                  ・私、宇宙（安藤エヌ）
+                  <br />
+                  ・destruction（中澤星児）
+                  <br />
+                  ・CLOVER（高橋まりな）
+                  <br />
+                  ・雯（鈴木レイヤ）▼仕様・サイズ：A5
+                  <br />
+                  ・ページ数：50　※表紙含む
+                  <br />
+                  ・色：オールカラー　※小説部分のみモノクロ※送料はZINEのみ購入の場合、一律¥300となります。
+                </p>
+              </div>
+              <div className={styles.banner_image}>
+                <Image
+                  src={cover}
+                  alt="bannerImage"
+                  width={280}
+                  height={392}
+                  layout={"responsive"}
+                />
+              </div>
+            </div>
 
             <div className={styles.banner_info}>
               <p className={styles.item_tite}>
@@ -178,15 +150,12 @@ const Home = ({ items }) => {
                     className={styles.item_link}
                   >
                     <div className={styles.item_imgContainer}>
-                      <motion.div
-                        className={styles.item_hideText}
-                        variants={hiddenVarient}
-                        initial="hidden"
-                        whileHover="visible"
+                      <div
+                        className={styles.hideText_container}
                         dangerouslySetInnerHTML={{
                           __html: item.short_description,
                         }}
-                      ></motion.div>
+                      ></div>
                       <Image
                         className={styles.item_image}
                         src={item.images[0].src}
@@ -212,7 +181,7 @@ const Home = ({ items }) => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };
