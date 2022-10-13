@@ -185,11 +185,7 @@ const Home = ({ items }) => {
                 </Link>
               </div>
             ))}
-            <button
-              className={`${styles.grid_item} ${styles.more}`}
-              onClick={() => loadMore()}
-            >
-              {" "}
+            <button className={styles.more} onClick={() => loadMore()}>
               view more
             </button>
           </div>
