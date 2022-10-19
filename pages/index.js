@@ -24,12 +24,13 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({ items }) => {
-  const [noOfElement, setnoOfElement] = useState(8);
+  const [visible, setVisible] = useState(6);
   const loadMore = () => {
-    setnoOfElement(noOfElement + noOfElement);
+    setVisible((preValue) => preValue + 8);
   };
-  const slice = items.slice(0, noOfElement);
+  const slice = items.slice(0, visible);
   const tax = 10;
+  console.log(slice.length);
   return (
     <>
       <Head>
@@ -186,7 +187,7 @@ const Home = ({ items }) => {
               </div>
             ))}
             <button className={styles.more} onClick={() => loadMore()}>
-              view more
+              {slice.length === items.length ? "No More" : "More"}
             </button>
           </div>
         </div>

@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import musitstoreOG from "../public/musitstoreOG.jpg";
 import store from "../public/store.jpg";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/About.module.scss";
 
 function About() {
   return (

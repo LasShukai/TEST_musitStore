@@ -1,183 +1,109 @@
 .content {
-  max-width: 1500px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 30px;
-  .title {
-    font-family: "sofia-pro";
-    font-size: 30px;
-  }
-  .banner_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px;
-    margin: 0 auto;
-    justify-content: center;
-    padding: 60px 40px;
-    .banner_img_container {
-      position: relative;
-      .hideText_container {
-        position: absolute;
-        background-color: rgba(34, 34, 34, 0.9);
-        overflow: scroll;
-        padding: 40px 50px;
-        z-index: 999;
-        // animation initial
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(10vh);
-      }
-      .banner_image {
-        box-shadow: 1px 1px 25px 2px #000;
-        -o-object-fit: contain;
-        object-fit: contain;
-      }
-    }
-    .banner_info {
-      display: block;
-      width: 500px;
-    }
-    &:hover {
-      .hideText_container {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-      }
-    }
-  }
-
-  .item_title {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-  .item_price {
-    color: #ebb353;
-    margin: 0;
-  }
-
-  .grid_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    .grid_item {
-      display: flex;
-      min-height: 500px;
-      flex-direction: column;
-      border: 0.5px solid #eaeaea;
-      padding: 20px 40px;
-      align-items: center;
-      position: relative;
-      .item_imgContainer {
-        align-items: center;
-        flex-direction: column;
-        align-items: center;
-
-        .hideText_container {
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
-          z-index: 99;
-          margin: 0;
-          padding: 0 15px;
-          text-align: left;
-          background-color: rgba(34, 34, 34, 0.9);
-          overflow: scroll;
-          visibility: hidden;
-          opacity: 0;
-          transform: translateY(10vh);
-        }
-        &:hover {
-          .hideText_container {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-          }
-        }
-      }
-    }
-    .item_notification {
-      justify-content: center;
-      .notification {
-        max-width: 120px;
-      }
-    }
-
-    .item_link {
-      width: 100%;
-    }
-  }
-  /*----------  タブレットサイズ  ----------*/
-  @media screen and (max-width: 1024px) {
+}
+.title {
+  font-family: "sofia-pro";
+  font-size: 30px;
+}
+.banner_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 60px 40px;
+  &:hover {
     .hideText_container {
-      display: none;
-    }
-
-    .grid_container {
-      grid-template-columns: 1fr 1fr 1fr;
-      .hideText_containe {
-        display: none;
-      }
-    }
-  }
-  /*----------  スマホサイズ  ----------------------------------------------------------------------*/
-  @media screen and (max-width: 768px) {
-    .banner_container {
-      padding: 20px 10px;
-      width: auto;
-      .banner_image {
-        width: 100%;
-      }
-      .banner_info {
-        width: fit-content;
-      }
-    }
-    .grid_container {
-      grid-template-columns: 1fr;
-      grid-template-columns: repeat(1, 1fr);
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
   }
 }
+.banner_info {
+  display: block;
+  width: 500px;
+}
+.banner_img_container {
+  position: relative;
+}
+.banner_image {
+  box-shadow: 1px 1px 25px 2px #000;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.hideText_container {
+  position: absolute;
+  background-color: rgba(34, 34, 34, 0.9);
+  overflow: scroll;
+  padding: 40px 50px;
+  z-index: 999;
+  // animation initial
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10vh);
+}
 
-/*---------- abouot page css  ----------*/
-.content {
-  .store {
-    margin-top: 40px;
-    padding: 40px;
-  }
-  .about_container {
-    display: grid;
-    grid-template-columns: (1fr 1fr);
-    gap: 80px;
-    padding: 50px 100px;
-    line-height: 2;
-    .contact_info {
-      display: flex;
-      .contact_info_item {
-        max-width: 145px;
-        padding: 10px;
-        p {
-          font-size: 13px;
-          color: #e2e2e2b6;
-        }
-      }
+.item_title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.item_price {
+  color: #ebb353;
+  margin: 0;
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid_item {
+  display: flex;
+  min-height: 400px;
+  flex-direction: column;
+  border: 0.5px solid #eaeaea;
+  padding: 20px 40px;
+  align-items: center;
+  position: relative;
+}
+.item_imgContainer {
+  align-items: center;
+  &:hover {
+    .hideText_container {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
   }
+}
+.hideText_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 99;
+  margin: 0;
+  padding: 0 15px;
+  text-align: left;
+  background-color: rgba(34, 34, 34, 0.9);
+  overflow: scroll;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10vh);
+}
+.item_notification {
+  justify-content: center;
+  .notification {
+    max-width: 120px;
+  }
+}
 
-  /*----------  タブレットサイズ  ----------*/
-  @media screen and (max-width: 1024px) {
-    .store {
-      margin-top: 20px;
-      padding: 10px;
-    }
-    .about_container {
-      grid-template-columns: 1fr;
-      grid-gap: 20px;
-      padding: 20px;
-      padding: 0;
-    }
-  }
+.item_link {
+  width: 100%;
 }
 .more {
   @extend .grid_item;
@@ -198,5 +124,36 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+}
+/*----------  タブレットサイズ  ----------*/
+@media screen and (max-width: 1024px) {
+  .hideText_container {
+    display: none;
+  }
+
+  .grid_container {
+    grid-template-columns: 1fr 1fr 1fr;
+    .hideText_containe {
+      display: none;
+    }
+  }
+}
+/*----------  スマホサイズ  ----------------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  .banner_container {
+    padding: 20px 10px;
+    width: auto;
+    .banner_image {
+      width: 100%;
+    }
+    .banner_info {
+      width: fit-content;
+    }
+  }
+  .grid_container {
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
